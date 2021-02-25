@@ -29,12 +29,12 @@ function creatStory(...args) {
 // Extend the default values functionality (for function parameters) to set to default
 // not only the undefined values but also the null values (but not other falsy values)
 function getSum(a = 12, b = 10) {
-  a = typeof a !== "object" ? a : 4;
-  b = typeof b !== "object" ? b : 5;
+  a = a !== null ? a : 4;
+  b = b !== null ? b : 5;
   return b + a;
 }
 
-// console.log(getSum(null, null));
+console.log(getSum(2, 3));
 
 // Write a function that behaves differently depending on the nr of arguments being passed
 function getPerim(...args) {
@@ -52,4 +52,4 @@ function getPerim(...args) {
   return perimeter;
 }
 
-console.log(getPerim(1, 3, 5));
+// console.log(getPerim(1, 3, 5));
